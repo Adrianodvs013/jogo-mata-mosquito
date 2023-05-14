@@ -1,6 +1,7 @@
 
 var altura = 0
 var largura = 0
+var vidas = 1
 
 function ajustaTamanhoPalcoJogo() {//Criei essa função e coloquei a logica dentro.
     //Esta é a logica inserida na função
@@ -17,6 +18,8 @@ function posicaoRandomica() {//Essa função encapsulou todo este bloco
     //Remover o mosquito anterior (caso exista)
    if(document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
+
+        document.getElementById('v' + vidas).src="imagens/coracao_vazio.png"
     }
 
     var posicaoX = Math.floor(Math.random() * largura) - 90
@@ -27,7 +30,7 @@ function posicaoRandomica() {//Essa função encapsulou todo este bloco
 
     console.log(posicaoX, posicaoY)
 
-    //Aqui criamos o elemento html
+    //Aqui criamos o elemento html de forma programatica
     var mosquito = document.createElement('img')
     mosquito.src = 'imagens/mosquito.png'
     mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
@@ -35,6 +38,9 @@ function posicaoRandomica() {//Essa função encapsulou todo este bloco
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+    mosquito.onclick = function(){
+        alert('Elemento clicado a tempo')
+    }
 
     document.body.appendChild(mosquito)
 
