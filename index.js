@@ -16,33 +16,42 @@ ajustaTamanhoPalcoJogo()
 function posicaoRandomica() {//Essa função encapsulou todo este bloco
 
     //Remover o mosquito anterior (caso exista)
-   if(document.getElementById('mosquito')) {
+    if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
 
-        document.getElementById('v' + vidas).src="imagens/coracao_vazio.png"
+        if (vidas > 3) {
+
+            alert('interromper o jogo (game over)')
+        } else {
+            document.getElementById('v' + vidas).src = "imagens/coração_vaio.png"
+            vidas++
+        }
     }
 
-    var posicaoX = Math.floor(Math.random() * largura) - 90
-    var posicaoY = Math.floor(Math.random() * altura) - 90
+    document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+}
 
-    posicaoX = posicaoX < 0 ? 0 : posicaoX
-    posicaoY = posicaoY < 0 ? 0 : posicaoY
+var posicaoX = Math.floor(Math.random() * largura) - 90
+var posicaoY = Math.floor(Math.random() * altura) - 90
 
-    console.log(posicaoX, posicaoY)
+posicaoX = posicaoX < 0 ? 0 : posicaoX
+posicaoY = posicaoY < 0 ? 0 : posicaoY
 
-    //Aqui criamos o elemento html de forma programatica
-    var mosquito = document.createElement('img')
-    mosquito.src = 'imagens/mosquito.png'
-    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
-    mosquito.style.left = posicaoX + 'px'
-    mosquito.style.top = posicaoY + 'px'
-    mosquito.style.position = 'absolute'
-    mosquito.id = 'mosquito'
-    mosquito.onclick = function(){
-        alert('Elemento clicado a tempo')
-    }
+console.log(posicaoX, posicaoY)
 
-    document.body.appendChild(mosquito)
+//Aqui criamos o elemento html de forma programatica
+var mosquito = document.createElement('img')
+mosquito.src = 'imagens/mosquito.png'
+mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
+mosquito.style.left = posicaoX + 'px'
+mosquito.style.top = posicaoY + 'px'
+mosquito.style.position = 'absolute'
+mosquito.id = 'mosquito'
+mosquito.onclick = function () {
+    alert('Elemento clicado a tempo')
+}
+
+document.body.appendChild(mosquito)
 
 }
 
@@ -61,7 +70,7 @@ function tamanhoAleatorio() {
     }
 }
 
-function ladoAleatorio(){
+function ladoAleatorio() {
     var classe = Math.floor(Math.random() * 2)
 
     switch (classe) {
