@@ -47,13 +47,10 @@ mosquito.style.left = posicaoX + 'px'
 mosquito.style.top = posicaoY + 'px'
 mosquito.style.position = 'absolute'
 mosquito.id = 'mosquito'
-mosquito.onclick = function () {
-    alert('Elemento clicado a tempo')
+mosquito.onclick = function() {
+    this.remove()
 }
 
-document.body.appendChild(mosquito)
-
-}
 
 function tamanhoAleatorio() {
     var classe = Math.floor(Math.random() * 3)
