@@ -12,4 +12,11 @@ function ajustaTamanhoPalcoJogo() {//Criei essa função e coloquei a logica den
 
 ajustaTamanhoPalcoJogo()
 
+var posicaoX = Math.floor(Math.random() * largura)
+var posicaoY = Math.floor(Math.random() * altura)
+
+console.log(posicaoX, posicaoY)
+
+
+
 
