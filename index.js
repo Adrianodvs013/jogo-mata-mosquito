@@ -21,7 +21,11 @@ console.log(posicaoX, posicaoY)
 //Criar o elemento html
 var mosquito = document.createElement('img')
 mosquito.src = 'imagens/mosquito.png'
-mosquito.className
+mosquito.className = 'mosquito1'
+mosquito.style.left = posicaoX + 'px'
+mosquito.style.top = posicaoY + 'px'
+mosquito.style.position = 'absolute'
+
 document.body.appendChild(mosquito)
 }
 
