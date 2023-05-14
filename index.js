@@ -12,11 +12,18 @@ function ajustaTamanhoPalcoJogo() {//Criei essa função e coloquei a logica den
 
 ajustaTamanhoPalcoJogo()
 
-var posicaoX = Math.floor(Math.random() * largura)
+function posicaoRandomica(){//Essa função encapsuloutodo este bloco
+    var posicaoX = Math.floor(Math.random() * largura)
 var posicaoY = Math.floor(Math.random() * altura)
 
 console.log(posicaoX, posicaoY)
 
+//Criar o elemento html
+var mosquito = document.createElement('img')
+mosquito.src = 'imagens/mosquito.png'
+mosquito.className
+document.body.appendChild(mosquito)
+}
 
 
 
