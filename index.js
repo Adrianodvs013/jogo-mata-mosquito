@@ -23,12 +23,12 @@ function posicaoRandomica() {//Essa função encapsulou todo este bloco
 
             alert('interromper o jogo (game over)')
         } else {
-            document.getElementById('v' + vidas).src = "imagens/coração_vaio.png"
+            document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
             vidas++
         }
     }
 
-    document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+
 }
 
 var posicaoX = Math.floor(Math.random() * largura) - 90
@@ -47,7 +47,7 @@ mosquito.style.left = posicaoX + 'px'
 mosquito.style.top = posicaoY + 'px'
 mosquito.style.position = 'absolute'
 mosquito.id = 'mosquito'
-mosquito.onclick = function() {
+mosquito.onclick = function () {
     this.remove()
 }
 
