@@ -12,7 +12,7 @@ function ajustaTamanhoPalcoJogo() {//Criei essa função e coloquei a logica den
 
 ajustaTamanhoPalcoJogo()
 
-function posicaoRandomica() {//Essa função encapsuloutodo este bloco
+function posicaoRandomica() {//Essa função encapsulou todo este bloco
 
     //Remover o mosquito anterior (caso exista)
    if(document.getElementById('mosquito')) {
@@ -27,7 +27,7 @@ function posicaoRandomica() {//Essa função encapsuloutodo este bloco
 
     console.log(posicaoX, posicaoY)
 
-    //Aquicriamos o elemento html
+    //Aqui criamos o elemento html
     var mosquito = document.createElement('img')
     mosquito.src = 'imagens/mosquito.png'
     mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
