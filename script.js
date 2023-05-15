@@ -18,14 +18,15 @@ function posicaoRandomica() {
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
 
-      if(vidas > 3) {
-         alert('Gamer Over')
-      }   else{
-        document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+        if (vidas > 3) {
+            
+            window.location.href = 'fim_de_jogo.html'
+        } else {
+            document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
 
-        vidas++
-      }     
-        
+            vidas++
+        }
+
     }
 
     var posicaoX = Math.floor(Math.random() * largura) - 90
@@ -44,7 +45,7 @@ function posicaoRandomica() {
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
-    mosquito.onclick = function(){
+    mosquito.onclick = function () {
         this.remove()
     }
 
