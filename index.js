@@ -17,10 +17,15 @@ function posicaoRandomica() {
     //remover o mosquito anterior (caso exista)
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
-        
+
+      if(vidas > 3) {
+         alert('Gamer Over')
+      }   else{
         document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
 
         vidas++
+      }     
+        
     }
 
     var posicaoX = Math.floor(Math.random() * largura) - 90
