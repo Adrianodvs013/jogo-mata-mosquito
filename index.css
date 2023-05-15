@@ -17,13 +17,17 @@ body{
     height: 90px;
 }
 
+/*---------------------------------------------------*/
+
 .ladoA{
    transform: scaleX(1);
 }
 
-.ladoA{
+.ladoB{
     transform: scaleX(-1);
  }
+
+/*---------------------------------------------------*/
 
  .painel{
     position: absolute;
@@ -31,10 +35,11 @@ body{
     padding: 10px;
     left: 0px;
     bottom: 0px;
-    border-top: splid 1px #fff;
+    border-top: solid 1px #fff;
+    background-color: #fff;
     opacity: 0.7;
  }
-
+ 
  .vidas{
   float: left;
  }
