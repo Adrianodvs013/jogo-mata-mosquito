@@ -13,6 +13,14 @@ function ajustaTamanhoPalcoJogo() {//Criei essa função e coloquei a logica den
 
 ajustaTamanhoPalcoJogo()
 
+var posicaoX = Math.floor(Math.random() * largura) - 90
+var posicaoY = Math.floor(Math.random() * altura) - 90
+
+var mosquito = document.createElement('img')
+
+document.body.appendChild(mosquito)
+
+
 function posicaoRandomica() {//Essa função encapsulou todo este bloco
 
     //Remover o mosquito anterior (caso exista)
@@ -31,8 +39,7 @@ function posicaoRandomica() {//Essa função encapsulou todo este bloco
 
 }
 
-var posicaoX = Math.floor(Math.random() * largura) - 90
-var posicaoY = Math.floor(Math.random() * altura) - 90
+
 
 posicaoX = posicaoX < 0 ? 0 : posicaoX
 posicaoY = posicaoY < 0 ? 0 : posicaoY
